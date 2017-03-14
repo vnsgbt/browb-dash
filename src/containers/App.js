@@ -7,7 +7,7 @@ class App extends Component {
       <div>
         <h1>DashOps</h1>
           <ul role="nav">
-            <li><NavLink to="/" onlyActiveOnIndex>Dashboard</NavLink></li>
+            <li><NavLink to="/dashboard" onlyActiveOnIndex>Dashboard</NavLink></li>
             <li><NavLink to="/notification">Notification</NavLink></li>
             <li><NavLink to="/configuration">Configuration</NavLink></li>
           </ul>
