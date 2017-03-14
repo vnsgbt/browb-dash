@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Configurations extends Component {
   render() {
     return (
-      <div>Configurations</div>
+      <h2>Configurations</h2>
     );
   }
 }
