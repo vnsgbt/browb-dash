@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavLink from '../components/NavLink'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <h1>DashOps</h1>
+          <ul role="nav">
+            <li><NavLink to="/" onlyActiveOnIndex>Dashboard</NavLink></li>
+            <li><NavLink to="/notification">Notification</NavLink></li>
+            <li><NavLink to="/configuration">Configuration</NavLink></li>
+          </ul>
+        {this.props.children}
       </div>
     );
   }
