@@ -20,13 +20,13 @@ class BoardModule extends Component {
                           <tr>
                             <td>1</td>
                             <td>RFS</td>
-                            <td>Last night</td>
+                            <td>11/31/2016</td>
                             <td>Infinite loop</td>
                           </tr>
                           <tr>
                             <td>2</td>
                             <td>COMPS</td>
-                            <td>All the time</td>
+                            <td>2/30/17</td>
                             <td>Stack Overflow</td>
                           </tr>
                         </tbody>
