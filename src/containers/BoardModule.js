@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Panel, Table, Jumbotron } from 'react-bootstrap'
+import { Panel, Table } from 'react-bootstrap'
 
 class BoardModule extends Component {
   render() {
