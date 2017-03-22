@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class Notification extends Component {
   render() {
     return (
-      <h2>Notification</h2>
+      <div className="container">
+        <h2>Notification</h2>
+      </div>
     );
   }
 }

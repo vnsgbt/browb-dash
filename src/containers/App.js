@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
-
-import NavLink from '../components/NavLink'
+import React, { Component } from 'react'
+import { Navbar, Nav, NavItem } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
+import { Link } from 'react-router'
 
 class App extends Component {
   render() {
@@ -11,15 +10,15 @@ class App extends Component {
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
               <Navbar.Brand>
-                DashOps
+                <Link to="/">DashOP</Link>
               </Navbar.Brand>
               <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
-            <Nav>
-              <NavItem><NavLink to="/dashboard" onlyActiveOnIndex>Dashboard</NavLink></NavItem>
-              <NavItem><NavLink to="/notification">Notification</NavLink></NavItem>
-              <NavItem><NavLink to="/configuration">Configuration</NavLink></NavItem>
+            <Nav pullRight>
+              <LinkContainer to="/dashboard" onlyActiveOnIndex><NavItem>Dashboard</NavItem></LinkContainer>
+              <LinkContainer to="/notification"><NavItem>Notification</NavItem></LinkContainer>
+              <LinkContainer to="/configuration"><NavItem>Configuration</NavItem></LinkContainer>
             </Nav>
           </Navbar.Collapse>
       </Navbar>
