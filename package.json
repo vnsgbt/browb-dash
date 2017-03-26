@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-cli": "^6.24.0",
     "react-scripts": "^0.9.3",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
@@ -11,7 +12,6 @@
   },
   "dependencies": {
     "bootstrap": "3",
-    "fixed-data-table": "^0.6.3",
     "humps": "^1.1.0",
     "lodash": "^4.16.1",
     "normalizr": "3.0.0",

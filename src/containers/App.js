@@ -22,9 +22,7 @@ class App extends Component {
             </Nav>
           </Navbar.Collapse>
       </Navbar>
-
         {this.props.children}
-
       </div>
     );
   }
