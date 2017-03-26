@@ -5,9 +5,9 @@ import { Button, PageHeader, Grid, Row, Col, Panel } from 'react-bootstrap'
 class Dashboard extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <div className="container">
-        <PageHeader className="center">Dashboard</PageHeader>
+          <PageHeader className="center">Dashboard</PageHeader>
         </div>        
            
         <div className="container">

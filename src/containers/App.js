@@ -10,7 +10,7 @@ class App extends Component {
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
               <Navbar.Brand>
-                <Link to="/">DashOP</Link>
+                <Link to="/">Zumwalt</Link>
               </Navbar.Brand>
               <Navbar.Toggle />
           </Navbar.Header>
