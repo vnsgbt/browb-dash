@@ -3,11 +3,10 @@ import { connect } from 'react-redux'
 import { Panel } from 'react-bootstrap'
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
 
-import { loadUser, loadStarred } from '../actions'
+import { loadQuaran } from '../actions'
 
-const loadData = ({ user, loadUser, loadStarred }) => {
-  loadUser(user, [ 'name' ])
-  loadStarred(user)  
+const loadData = ({ loadQuaran }) => {
+  loadQuaran()
 }
 
 // It's a data format example.
@@ -15,7 +14,7 @@ function priceFormatter(cell, row){
   return '<i class="glyphicon glyphicon-usd"></i> ' + cell;
 }
 
-var quanrantines = [{
+var quarantines = [{
   id: 1,
   name: 'RFS',
   time: '11/31/2016',
@@ -31,9 +30,8 @@ var quanrantines = [{
 
 class BoardModule extends Component {
   static propTypes = {
-    user: PropTypes.string.isRequired,
-    loadUser: PropTypes.func.isRequired,
-    loadStarred: PropTypes.func.isRequired
+    quarantines: PropTypes.object.isRequired,
+    loadQuaran: PropTypes.func.isRequired,
   }
 
   componentWillMount() {
@@ -46,7 +44,7 @@ class BoardModule extends Component {
       <div className="container">
         <Panel>
           <div>{ moduleName === 'heartbeat' ? <h1>'ba boom... ba boom...'</h1> : 
-            <BootstrapTable data={quanrantines} striped={true} hover={true}>
+            <BootstrapTable data={quarantines} striped={true} hover={true}>
                 <TableHeaderColumn dataField="id" isKey={true} dataAlign="center" dataSort={true}>ID</TableHeaderColumn>
                 <TableHeaderColumn dataField="name" dataSort={true}>App Name</TableHeaderColumn>
                 <TableHeaderColumn dataField="time">Time</TableHeaderColumn>
@@ -61,20 +59,12 @@ class BoardModule extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  const user = 'vnsgbt'
 
   const {
-    pagination: { starredByUser },
-    entities: { repos }
+    entities: { quarantines }
   } = state
 
-  const pagination = starredByUser[user] || {ids: []}
-  const starredRepo = pagination.ids.map(id => repos[id])
-
-  return { user, starredRepo }
+  return { quarantines }
 }
 
-export default connect(mapStateToProps, { 
-  loadUser, 
-  loadStarred 
-})(BoardModule);
+export default connect(mapStateToProps, { loadQuaran })(BoardModule);
